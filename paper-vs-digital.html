@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper vs. Digital Systems Comparison | Research Matrix</title>
+  <meta name="description" content="An objective, comprehensive side-by-side life-cycle analysis comparing traditional physical paper against digital cloud ecosystems, devices, and e-waste.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    .compare-hero {
+      background: var(--c-paper);
+      padding: 70px 24px 50px;
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .compare-section {
+      padding: 80px 24px;
+      background: var(--c-white);
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .matrix-wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    /* Comparison Table */
+    .matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--c-paper-line);
+      box-shadow: var(--c-shadow-md);
+      background: var(--c-card-bg);
+      margin-bottom: 50px;
+    }
+    .matrix-table th, .matrix-table td {
+      padding: 22px 28px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .matrix-table thead th {
+      font-size: 1.15rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--c-paper-line);
+    }
+    .th-factor {
+      width: 24%;
+      background: var(--c-paper-light);
+      color: var(--c-ink);
+    }
+    .th-paper {
+      width: 38%;
+      background: var(--c-clay-soft);
+      color: var(--c-clay);
+      border-left: 1px solid var(--c-paper-line);
+    }
+    .th-digital {
+      width: 38%;
+      background: var(--c-digital-light);
+      color: var(--c-digital);
+      border-left: 1px solid var(--c-paper-line);
+    }
+    .matrix-table tbody tr {
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .matrix-table tbody tr:last-child {
+      border-bottom: none;
+    }
+    .matrix-table tbody td {
+      border-top: 1px solid var(--c-paper-line);
+      border-left: 1px solid var(--c-paper-line);
+      font-size: 0.96rem;
+      color: var(--c-ink-soft);
+    }
+    .matrix-table tbody td:first-child {
+      border-left: none;
+      font-weight: 600;
+      color: var(--c-ink);
+      background: var(--c-paper-light);
+    }
+
+    /* Mobile Responsive Card Format */
+    .matrix-cards {
+      display: none;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .matrix-card {
+      border: 1px solid var(--c-paper-line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--c-card-bg);
+      box-shadow: var(--c-shadow-sm);
+    }
+    .matrix-card-head {
+      padding: 18px 24px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+    .card-head-paper { background: var(--c-clay); }
+    .card-head-digital { background: var(--c-digital); }
+    .matrix-card dl {
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+    }
+    .matrix-card dt {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--c-ink-muted);
+    }
+    .matrix-card dd {
+      color: var(--c-ink-soft);
+      line-height: 1.5;
+    }
+
+    /* E-Waste Alert Box */
+    .ewaste-box {
+      background: var(--c-clay-soft);
+      border: 1px solid var(--c-clay);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .ewaste-icon {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .matrix-table { display: none; }
+      .matrix-cards { display: flex; }
+      .ewaste-box { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-nav" role="banner">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#123642"/><path d="M12 10H28L36 18V38H12V10Z" fill="#EDE6D6"/><path d="M28 10V18H36" fill="#D9C9A0"/><rect x="18" y="24" width="5" height="5" rx="1" fill="#4FB8AE"/><rect x="25" y="24" width="9" height="2" fill="#123642"/><rect x="18" y="31" width="16" height="2" fill="#C9B98C"/><path d="M34 26C37 26 40 23 40 20C37 20 34 23 34 26Z" fill="#5C7A52"/></svg>
+        <div class="brand-title">
+          <span>Paper <strong class="brand-accent">&times;</strong> Digital</span>
+          <span>Sustainability Initiative</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle active" aria-haspopup="true">
+            <span>Research Topics</span>
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="lifecycle.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Paper Lifecycle</strong><span>Forest harvest to landfill</span></div></a>
+            <a href="impact.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Environmental Impact</strong><span>Water, carbon & forests</span></div></a>
+            <a href="paper-vs-digital.html" class="dropdown-link active"><div class="dropdown-link-text"><strong>Paper vs Digital</strong><span>Trade-offs & energy</span></div></a>
+            <a href="solutions.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Solutions (5 R's &amp; AI)</strong><span>Efficiency models</span></div></a>
+            <a href="action-plan.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Action Plan for LPU</strong><span>10-step roadmap</span></div></a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="calculator.html" class="nav-link">Calculator &amp; Quiz</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Sources &amp; Data</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Project</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="calculator.html" class="nav-cta-btn">Calculator</a>
+        <button type="button" class="mobile-toggle-btn" id="mobileToggleBtn" aria-expanded="false" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="compare-hero">
+      <div class="nav-container" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="kicker">Objective Life-Cycle Analysis</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Paper vs. Digital: Side-by-Side Trade-Offs</h1>
+        <p style="max-width: 760px; font-size: 1.1rem; color: var(--c-ink-soft);">
+          A credible sustainability evaluation does not pretend digital technology is free of ecological impact. Here we contrast physical paper chains directly with server energy, hardware mining, and e-waste dynamics.
+        </p>
+      </div>
+    </section>
+
+    <section class="compare-section">
+      <div class="matrix-wrap">
+        <!-- Table for Desktop -->
+        <table class="matrix-table" aria-label="Side-by-side comparison of Paper and Digital systems">
+          <thead>
+            <tr>
+              <th class="th-factor">Comparison Dimension</th>
+              <th class="th-paper">Traditional Paper System</th>
+              <th class="th-digital">Digital &amp; Cloud System</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Core Raw Materials</td>
+              <td>Relies on virgin timber harvesting, vast chemical pulping agents (NaOH, Na2S), chlorine bleaching compounds, and 5-10L water per page.</td>
+              <td>Relies on rare earth minerals, silicon chips, lithium, and aluminum extracted for consumer hardware and server racks.</td>
+            </tr>
+            <tr>
+              <td>Logistics &amp; Transport</td>
+              <td>Heavy physical freight: logs trucked to mills, bulk paper reels shipped across oceans, boxes distributed to individual stores and campuses.</td>
+              <td>Data travels instantly across fiber optic backbones; continuous electric current keeps servers and network switches online 24/7.</td>
+            </tr>
+            <tr>
+              <td>Operational Emissions</td>
+              <td>Continuous thermal combustion at mills, drying cylinder steam boilers, delivery truck fuel exhaust, and printer toner heat.</td>
+              <td>Data center electricity consumption. However, major cloud providers now contract upwards of 75%–100% renewable wind and solar energy.</td>
+            </tr>
+            <tr>
+              <td>Storage &amp; Physical Footprint</td>
+              <td>Physical filing cabinets, document archive rooms, air-conditioned paper record facilities consuming valuable campus real estate.</td>
+              <td>Petabytes stored inside dense cloud flash storage arrays with near-zero physical room footprint per student.</td>
+            </tr>
+            <tr>
+              <td>End-of-Life &amp; Waste Stream</td>
+              <td>Biodegradable, yet forms 26% of landfill volume emitting methane when uncollected. Recyclable up to 5–7 cycles if kept clean.</td>
+              <td>Electronic waste (e-waste) contains toxic lead, cadmium, and mercury. Requires specialized, regulated electronic recycling centers.</td>
+            </tr>
+            <tr>
+              <td>Speed &amp; Collaboration</td>
+              <td>Slow manual dispatch, paperwork lost in transit, requires physical stamps, manual signature rounds, and photocopies.</td>
+              <td>Instantaneous multi-user collaboration, cryptographic digital signatures, version control, and real-time audit logs.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Cards for Mobile -->
+        <div class="matrix-cards">
+          <div class="matrix-card">
+            <div class="matrix-card-head card-head-paper">Paper System Profile</div>
+            <dl>
+              <dt>Raw Materials</dt>
+              <dd>Virgin timber, chemical bleaching agents, 10L freshwater per sheet.</dd>
+              <dt>Logistics</dt>
+              <dd>High fossil fuel road freight from forest to mill to campus.</dd>
+              <dt>Storage</dt>
+              <dd>Filing cabinets and heavy archival storage space.</dd>
+              <dt>End of Life</dt>
+              <dd>Anaerobic decomposition in landfills yielding methane.</dd>
+            </dl>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head card-head-digital">Digital System Profile</div>
+            <dl>
+              <dt>Raw Materials</dt>
+              <dd>Rare earth minerals and silicon for personal devices and servers.</dd>
+              <dt>Logistics</dt>
+              <dd>Near-instant fiber routing; draws continuous grid electricity.</dd>
+              <dt>Storage</dt>
+              <dd>Zero physical space footprint; highly scalable cloud archives.</dd>
+              <dt>End of Life</dt>
+              <dd>E-waste requires responsible collection and precious metal recovery.</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- The E-Waste Nuance -->
+        <div class="ewaste-box">
+          <div class="ewaste-icon">&#x26A0;</div>
+          <div>
+            <h3 style="font-size: 1.25rem; color: var(--c-clay); margin-bottom: 8px;">The Digital Caveat: Addressing E-Waste Responsibly</h3>
+            <p style="font-size: 0.98rem; color: var(--c-ink-soft); line-height: 1.6;">
+              Going paperless only succeeds if universities implement certified electronic waste recycling. Old laptops, tablet batteries, and printers must never enter general landfills. LPU’s Action Plan mandates dedicated e-waste drop-off bins across student hostels and faculty blocks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Paper <span class="brand-accent">&times;</span> Digital</h3>
+          <p>LPU CA-2 Research Project investigating the ecological footprints of paper manufacturing and advancing digital transitions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="lifecycle.html" class="footer-link">Paper Lifecycle</a></li>
+            <li><a href="impact.html" class="footer-link">Environmental Impact</a></li>
+            <li><a href="solutions.html" class="footer-link">5 R's &amp; AI/ML</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Interactive</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html" class="footer-link">Paper Footprint Calculator</a></li>
+            <li><a href="action-plan.html" class="footer-link">LPU Action Plan</a></li>
+            <li><a href="resources.html" class="footer-link">Citations &amp; Sources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Institutional</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Team &amp; Mentor</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Lovely Professional University. Environmental Studies CA-2.</div>
+        <div><a href="#main-content" class="back-to-top-btn">Back to top &uarr;</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
