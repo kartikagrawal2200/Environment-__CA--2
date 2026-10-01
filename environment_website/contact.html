@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Research Team & Submit Feedback | LPU Sustainability</title>
+  <meta name="description" content="Get in touch with the student research team behind the Paper Consumption in the Digital Age study. Submit feedback or institutional collaboration inquiries.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    .contact-hero {
+      background: var(--c-paper);
+      padding: 70px 24px 50px;
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .contact-section {
+      padding: 80px 24px;
+      background: var(--c-white);
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .contact-grid {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+    }
+    .contact-form-card {
+      background: var(--c-card-bg);
+      border: 1px solid var(--c-paper-line);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--c-shadow-md);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      color: var(--c-ink);
+    }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--c-paper-line);
+      border-radius: var(--radius-sm);
+      background: var(--c-white);
+      color: var(--c-ink);
+      font-size: 0.95rem;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--c-digital-bright);
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .contact-info-card {
+      background: var(--c-paper-light);
+      border: 1px solid var(--c-paper-line);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .info-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--c-digital-tint);
+      color: var(--c-digital-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-success-msg {
+      display: none;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      background: var(--c-leaf-soft);
+      border: 1px solid var(--c-leaf);
+      color: var(--c-leaf);
+      font-weight: 600;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 860px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-nav" role="banner">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#123642"/><path d="M12 10H28L36 18V38H12V10Z" fill="#EDE6D6"/><path d="M28 10V18H36" fill="#D9C9A0"/><rect x="18" y="24" width="5" height="5" rx="1" fill="#4FB8AE"/><rect x="25" y="24" width="9" height="2" fill="#123642"/><rect x="18" y="31" width="16" height="2" fill="#C9B98C"/><path d="M34 26C37 26 40 23 40 20C37 20 34 23 34 26Z" fill="#5C7A52"/></svg>
+        <div class="brand-title">
+          <span>Paper <strong class="brand-accent">&times;</strong> Digital</span>
+          <span>Sustainability Initiative</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-haspopup="true">
+            <span>Research Topics</span>
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="lifecycle.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Paper Lifecycle</strong><span>Forest harvest to landfill</span></div></a>
+            <a href="impact.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Environmental Impact</strong><span>Water, carbon & forests</span></div></a>
+            <a href="paper-vs-digital.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Paper vs Digital</strong><span>Trade-offs & energy</span></div></a>
+            <a href="solutions.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Solutions (5 R's &amp; AI)</strong><span>Efficiency models</span></div></a>
+            <a href="action-plan.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Action Plan for LPU</strong><span>10-step roadmap</span></div></a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="calculator.html" class="nav-link">Calculator &amp; Quiz</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Sources &amp; Data</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Project</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></div>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="calculator.html" class="nav-cta-btn">Calculator</a>
+        <button type="button" class="mobile-toggle-btn" id="mobileToggleBtn" aria-expanded="false" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-hero">
+      <div class="nav-container" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="kicker">Get in Touch</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Contact the Research Team</h1>
+        <p style="max-width: 760px; font-size: 1.1rem; color: var(--c-ink-soft);">
+          Have questions regarding our paper consumption data, want to share feedback on our campus action plan, or propose an institutional partnership? Send us a message below.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-card">
+          <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Send a Message</h2>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cName">Your Full Name *</label>
+                <input type="text" id="cName" class="form-input" placeholder="e.g. Kartik Agrawal" required>
+              </div>
+              <div class="form-group">
+                <label for="cEmail">Email Address *</label>
+                <input type="email" id="cEmail" class="form-input" placeholder="e.g. student@lpu.in" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cRole">Your Role / Affiliation</label>
+              <select id="cRole" class="form-select">
+                <option value="student">LPU Student</option>
+                <option value="faculty">Faculty / Professor</option>
+                <option value="staff">Campus Administration / Staff</option>
+                <option value="external">External Researcher / Citizen</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cSubject">Subject</label>
+              <input type="text" id="cSubject" class="form-input" placeholder="e.g. Feedback on 10-step Action Plan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cMessage">Your Message *</label>
+              <textarea id="cMessage" class="form-textarea" placeholder="Share your suggestions, data inquiries, or paper reduction ideas..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Transmit Message</button>
+            <div id="contactSuccessMsg" class="contact-success-msg" role="status">
+              &check; Thank you! Your message has been received by the research team.
+            </div>
+          </form>
+        </div>
+
+        <!-- Info Card -->
+        <div class="contact-info-card">
+          <div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 24px;">Campus Coordinates</h2>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong style="color: var(--c-ink);">Campus Location</strong>
+                <p style="font-size: 0.92rem; color: var(--c-ink-soft); margin-top: 2px;">
+                  Lovely Professional University<br>
+                  Jalandhar - Delhi G.T. Road, Phagwara, Punjab 144411, India
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong style="color: var(--c-ink);">Academic Project Email</strong>
+                <p style="font-size: 0.92rem; color: var(--c-ink-soft); margin-top: 2px;">
+                  sustainability.ca2@lpu.in
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div>
+                <strong style="color: var(--c-ink);">Open Codebase &amp; Data</strong>
+                <p style="font-size: 0.92rem; color: var(--c-ink-soft); margin-top: 2px;">
+                  github.com/kartikagrawal2200/Environment-__CA--2
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--c-card-bg); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--c-paper-line);">
+            <strong style="font-size: 0.95rem; color: var(--c-digital);">Open Access Research</strong>
+            <p style="font-size: 0.88rem; color: var(--c-ink-soft); margin-top: 4px;">
+              All research findings, calculators, and action plan templates are distributed openly for institutional and educational replication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Paper <span class="brand-accent">&times;</span> Digital</h3>
+          <p>LPU CA-2 Research Project investigating the ecological footprints of paper manufacturing and advancing digital transitions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="lifecycle.html" class="footer-link">Paper Lifecycle</a></li>
+            <li><a href="impact.html" class="footer-link">Environmental Impact</a></li>
+            <li><a href="paper-vs-digital.html" class="footer-link">Paper vs Digital</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Interactive</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html" class="footer-link">Paper Footprint Calculator</a></li>
+            <li><a href="action-plan.html" class="footer-link">LPU Action Plan</a></li>
+            <li><a href="resources.html" class="footer-link">Citations &amp; Sources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Institutional</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Team &amp; Mentor</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Lovely Professional University. Environmental Studies CA-2.</div>
+        <div><a href="#main-content" class="back-to-top-btn">Back to top &uarr;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const contactSuccessMsg = document.getElementById('contactSuccessMsg');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('cName').value.trim();
+      const email = document.getElementById('cEmail').value.trim();
+      const message = document.getElementById('cMessage').value.trim();
+
+      if (name && email && message) {
+        // Save to localStorage simulation
+        const messages = JSON.parse(localStorage.getItem('campus_messages') || '[]');
+        messages.push({
+          name,
+          email,
+          role: document.getElementById('cRole').value,
+          subject: document.getElementById('cSubject').value,
+          message,
+          timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('campus_messages', JSON.stringify(messages));
+
+        contactSuccessMsg.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => { contactSuccessMsg.style.display = 'none'; }, 6000);
+      }
+    });
+  </script>
+</body>
+</html>

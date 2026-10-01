@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions: The 5 R's & Green AI/ML | Sustainable Paper Alternatives</title>
+  <meta name="description" content="Actionable sustainable solutions: The 5 R's framework for paper waste management combined with artificial intelligence and machine learning for document optimization.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    .sol-hero {
+      background: var(--c-paper);
+      padding: 70px 24px 50px;
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .sol-section {
+      padding: 80px 24px;
+      background: var(--c-white);
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .fr-grid {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .fr-card {
+      background: var(--c-card-bg);
+      border: 1px solid var(--c-paper-line);
+      border-top: 4px solid var(--c-leaf);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--c-shadow-sm);
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .fr-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--c-shadow-md);
+      border-top-color: var(--c-digital-bright);
+    }
+    .fr-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--c-leaf);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+    }
+    .fr-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--c-ink);
+    }
+    .fr-desc {
+      font-size: 0.92rem;
+      color: var(--c-ink-soft);
+      line-height: 1.5;
+    }
+
+    /* AI / ML Section */
+    .ai-section {
+      padding: 90px 24px;
+      background: var(--c-paper-light);
+      border-bottom: 1px solid var(--c-paper-line);
+    }
+    .ai-grid {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .ai-card {
+      background: var(--c-card-bg);
+      border: 1px solid var(--c-paper-line);
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
+      box-shadow: var(--c-shadow-sm);
+      position: relative;
+      transition: all var(--transition-normal);
+    }
+    .ai-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--c-shadow-md);
+      border-color: var(--c-digital-bright);
+    }
+    .ai-card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .ai-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .ai-card p {
+      font-size: 0.92rem;
+      color: var(--c-ink-soft);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .fr-grid { grid-template-columns: repeat(3, 1fr); }
+      .ai-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .fr-grid { grid-template-columns: 1fr; }
+      .ai-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-nav" role="banner">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#123642"/><path d="M12 10H28L36 18V38H12V10Z" fill="#EDE6D6"/><path d="M28 10V18H36" fill="#D9C9A0"/><rect x="18" y="24" width="5" height="5" rx="1" fill="#4FB8AE"/><rect x="25" y="24" width="9" height="2" fill="#123642"/><rect x="18" y="31" width="16" height="2" fill="#C9B98C"/><path d="M34 26C37 26 40 23 40 20C37 20 34 23 34 26Z" fill="#5C7A52"/></svg>
+        <div class="brand-title">
+          <span>Paper <strong class="brand-accent">&times;</strong> Digital</span>
+          <span>Sustainability Initiative</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle active" aria-haspopup="true">
+            <span>Research Topics</span>
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="lifecycle.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Paper Lifecycle</strong><span>Forest harvest to landfill</span></div></a>
+            <a href="impact.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Environmental Impact</strong><span>Water, carbon & forests</span></div></a>
+            <a href="paper-vs-digital.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Paper vs Digital</strong><span>Trade-offs & energy</span></div></a>
+            <a href="solutions.html" class="dropdown-link active"><div class="dropdown-link-text"><strong>Solutions (5 R's &amp; AI)</strong><span>Efficiency models</span></div></a>
+            <a href="action-plan.html" class="dropdown-link"><div class="dropdown-link-text"><strong>Action Plan for LPU</strong><span>10-step roadmap</span></div></a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="calculator.html" class="nav-link">Calculator &amp; Quiz</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Sources &amp; Data</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Project</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="calculator.html" class="nav-cta-btn">Calculator</a>
+        <button type="button" class="mobile-toggle-btn" id="mobileToggleBtn" aria-expanded="false" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="sol-hero">
+      <div class="nav-container" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="kicker">Actionable Interventions</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem);">The 5 R's Framework &amp; Green AI/ML</h1>
+        <p style="max-width: 760px; font-size: 1.1rem; color: var(--c-ink-soft);">
+          Resolving paper overconsumption requires a dual approach: daily behavioral changes structured around the 5 R’s, augmented by algorithmic demand forecasting and intelligent document automation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Part 1: The 5 R's -->
+    <section class="sol-section">
+      <div class="nav-container" style="flex-direction: column; margin-bottom: 40px; text-align: center;">
+        <span class="kicker">Behavioral Discipline</span>
+        <h2 style="font-size: 2.2rem;">The 5 R's of Paper Waste Management</h2>
+        <p style="color: var(--c-ink-soft); max-width: 650px; margin: 0 auto;">
+          Everyday habits that curb paper usage before, during, and after its presence on campus.
+        </p>
+      </div>
+
+      <div class="fr-grid">
+        <div class="fr-card">
+          <div class="fr-num">1</div>
+          <h3 class="fr-title">Refuse</h3>
+          <p class="fr-desc">Say no to physical flyers, unsolicited circulars, and single-use printed receipts when a digital version exists.</p>
+        </div>
+        <div class="fr-card">
+          <div class="fr-num">2</div>
+          <h3 class="fr-title">Reduce</h3>
+          <p class="fr-desc">Default all campus printers to double-sided duplex and narrow margins to cut page requirements by 50%.</p>
+        </div>
+        <div class="fr-card">
+          <div class="fr-num">3</div>
+          <h3 class="fr-title">Reuse</h3>
+          <p class="fr-desc">Collect single-sided misprints into rough work scrap pads for lab calculations and drafting notes.</p>
+        </div>
+        <div class="fr-card">
+          <div class="fr-num">4</div>
+          <h3 class="fr-title">Repurpose</h3>
+          <p class="fr-desc">Convert delivery packaging and heavy cardboard into classroom model materials and storage dockets.</p>
+        </div>
+        <div class="fr-card">
+          <div class="fr-num">5</div>
+          <h3 class="fr-title">Recycle</h3>
+          <p class="fr-desc">Segregate clean paper into marked recycling receptacles, keeping it free from food oils and beverage liquids.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 2: AI & ML -->
+    <section class="ai-section">
+      <div class="nav-container" style="flex-direction: column; margin-bottom: 40px;">
+        <span class="kicker">Technological Automation</span>
+        <h2 style="font-size: 2.2rem;">AI &amp; Machine Learning for Smart Paper Management</h2>
+        <p style="color: var(--c-ink-soft); max-width: 720px;">
+          How universities and modern enterprises leverage machine learning models to prevent wasteful print jobs at the source while minimizing digital computing overhead.
+        </p>
+      </div>
+
+      <div class="ai-grid">
+        <article class="ai-card">
+          <span class="ai-card-icon">&#x1F4C4;</span>
+          <h3>Intelligent Document OCR</h3>
+          <p>
+            Computer vision pipelines automatically classify, parse, and index handwritten student submissions and printed archives, eliminating the need for physical photocopying.
+          </p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card-icon">&#x1F4CA;</span>
+          <h3>Print Demand Forecasting</h3>
+          <p>
+            Time-series machine learning models predict syllabus print requirements based on historical enrollments, preventing 20%–35% of academic paper overstock.
+          </p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card-icon">&#x1F4C8;</span>
+          <h3>Real-Time Resource Dashboards</h3>
+          <p>
+            IoT network monitors track page counts per university department, triggering automated alerts when print volumes exceed sustainability quota thresholds.
+          </p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card-icon">&#x1F331;</span>
+          <h3>Green Compute Routing</h3>
+          <p>
+            Model weights are quantized and scheduled to run in cloud data centers during peak renewable generation hours (solar/wind), keeping digital carbon near zero.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Paper <span class="brand-accent">&times;</span> Digital</h3>
+          <p>LPU CA-2 Research Project on paper manufacturing footprints and institutional digital transitions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="lifecycle.html" class="footer-link">Paper Lifecycle</a></li>
+            <li><a href="impact.html" class="footer-link">Environmental Impact</a></li>
+            <li><a href="paper-vs-digital.html" class="footer-link">Paper vs Digital</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Interactive</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html" class="footer-link">Paper Footprint Calculator</a></li>
+            <li><a href="action-plan.html" class="footer-link">LPU Action Plan</a></li>
+            <li><a href="resources.html" class="footer-link">Citations &amp; Sources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Institutional</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Team &amp; Mentor</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Lovely Professional University. Environmental Studies CA-2.</div>
+        <div><a href="#main-content" class="back-to-top-btn">Back to top &uarr;</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

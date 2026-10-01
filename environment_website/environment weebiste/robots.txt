@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kartikagrawal2200.github.io/Environment-__CA--2/sitemap.xml
