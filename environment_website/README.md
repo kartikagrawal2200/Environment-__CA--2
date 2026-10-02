@@ -1,8 +1,15 @@
 # Paper Consumption in the Digital Age: Environmental Impacts & Sustainable Alternatives
 
+> ### 🌐 Live Website URL: [https://kartikagrawal2200.github.io/Environment-__CA--2/](https://kartikagrawal2200.github.io/Environment-__CA--2/)
+> **👉 Click the link above to directly open and interact with the live website!**
+
+[![Live Website](https://img.shields.io/badge/Live%20Site-Visit%20Now-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://kartikagrawal2200.github.io/Environment-__CA--2/)
+[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-123642?style=for-the-badge&logo=github&logoColor=white)](https://kartikagrawal2200.github.io/Environment-__CA--2/)
+
 A multi-page research and institutional sustainability website investigating global paper consumption, ecological footprints, and actionable digital transitions. Developed for Lovely Professional University (LPU) Environmental Studies CA-2.
 
 ---
+
 
 ## 📁 Project Structure
 
