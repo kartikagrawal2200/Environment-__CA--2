@@ -6,7 +6,7 @@
 [![Live Website](https://img.shields.io/badge/Live%20Site-Visit%20Now-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://kartikagrawal2200.github.io/Environment-__CA--2/)
 [![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-123642?style=for-the-badge&logo=github&logoColor=white)](https://kartikagrawal2200.github.io/Environment-__CA--2/)
 
-A multi-page research and institutional sustainability website investigating global paper consumption, ecological footprints, and actionable digital transitions. Developed for Lovely Professional University (LPU) Environmental Studies CA-2.
+A multi-page research and sustainability platform investigating global paper consumption, ecological footprints, and actionable digital transitions across modern organizations and workplaces.
 
 ---
 
@@ -19,12 +19,12 @@ A multi-page research and institutional sustainability website investigating glo
 ├── impact.html             # Environmental impact data (Water, Carbon, Forest, Landfill)
 ├── paper-vs-digital.html   # Side-by-side comparative trade-off matrix & charts
 ├── solutions.html          # Solutions module: 5 R's framework + Green AI/ML compute
-├── action-plan.html        # 10-step institutional roadmap tailored for LPU
+├── action-plan.html        # 10-step organizational roadmap for sustainable operations
 ├── calculator.html         # Interactive Footprint Calculator + 5-Question Sustainability Quiz
 ├── resources.html          # Scientific citations, bibliography, and downloadable toolkits
-├── about.html              # Research team, mentor, university, and objective
+├── about.html              # Research team, advisory panel, and objectives
 ├── contact.html            # Contact & sustainability pledge portal
-├── privacy.html            # Data privacy & academic integrity policy
+├── privacy.html            # Data privacy policy & research integrity statement
 ├── 404.html                # Error page
 ├── robots.txt              # Search engine directives
 ├── sitemap.xml             # XML sitemap for SEO
@@ -32,7 +32,7 @@ A multi-page research and institutional sustainability website investigating glo
 │   └── style.css           # Design system (Fraunces + IBM Plex Sans, dark mode, responsive, WCAG AA)
 ├── js/
 │   ├── main.js             # Theme toggle, slider, counters, scroll animations, Chart.js preview
-│   ├── charts.js           # Full interactive charts (Footprint, Recycled vs Virgin, Campus Trends)
+│   ├── charts.js           # Full interactive charts (Footprint, Recycled vs Virgin, Organizational Trends)
 │   └── calculator.js       # Paper footprint logic & interactive quiz engine
 └── assets/
     ├── icons/              # Scalable SVG icons and project marks
