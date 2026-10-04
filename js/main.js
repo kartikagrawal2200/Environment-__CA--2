@@ -140,7 +140,7 @@
   }
 
   // =========================================================================
-  // 4. INTERACTIVE BEFORE / AFTER SLIDER ("Campus Transformation")
+  // 4. INTERACTIVE BEFORE / AFTER SLIDER ("Workplace Transformation")
   // =========================================================================
   const sliderContainer = document.querySelector('.comparison-slider-container');
   const sliderWrapper = document.querySelector('.slider-wrapper');
@@ -264,8 +264,8 @@
   function updateChartTheme(chart) {
     if (!chart) return;
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const textColor = isDark ? '#BDC8BF' : '#4F554B';
-    const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)';
+    const textColor = isDark ? '#E2F0D9' : '#1B3D1C';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)';
 
     if (chart.options.scales) {
       if (chart.options.scales.x) {
@@ -275,10 +275,13 @@
       if (chart.options.scales.y) {
         chart.options.scales.y.ticks.color = textColor;
         chart.options.scales.y.grid.color = gridColor;
+        if (chart.options.scales.y.title) {
+          chart.options.scales.y.title.color = textColor;
+        }
       }
     }
     if (chart.options.plugins && chart.options.plugins.legend) {
-      chart.options.plugins.legend.labels.color = textColor;
+      chart.options.plugins.legend.labels.color = isDark ? '#FFFFFF' : '#1B3D1C';
     }
     chart.update();
   }
@@ -287,8 +290,8 @@
   if (chartCanvas && typeof Chart !== 'undefined') {
     const ctx = chartCanvas.getContext('2d');
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const textColor = isDark ? '#BDC8BF' : '#4F554B';
-    const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)';
+    const textColor = isDark ? '#E2F0D9' : '#1B3D1C';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)';
 
     const chartData = {
       labels: ['Water (L/1000 pgs)', 'CO2 (kg/1000 pgs)', 'Energy (kWh/1000 pgs)', 'Landfill (kg/1000 pgs)'],
@@ -330,8 +333,8 @@
           legend: {
             position: 'top',
             labels: {
-              color: textColor,
-              font: { family: "'IBM Plex Sans', sans-serif", size: 12, weight: '500' },
+              color: isDark ? '#FFFFFF' : '#1B3D1C',
+              font: { family: "'IBM Plex Sans', sans-serif", size: 12, weight: '600' },
               padding: 16
             }
           },
@@ -345,7 +348,7 @@
         },
         scales: {
           x: {
-            ticks: { color: textColor, font: { family: "'IBM Plex Sans', sans-serif" } },
+            ticks: { color: textColor, font: { family: "'IBM Plex Sans', sans-serif", weight: '500' } },
             grid: { color: gridColor }
           },
           y: {
@@ -361,7 +364,7 @@
               display: true,
               text: 'Logarithmic Scale (Normalized Units)',
               color: textColor,
-              font: { family: "'IBM Plex Sans', sans-serif", size: 11 }
+              font: { family: "'IBM Plex Sans', sans-serif", size: 11, weight: '600' }
             }
           }
         }
